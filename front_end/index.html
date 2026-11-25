@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petshop</title>
+  <!-- Conecta o arquivo de estilos CSS ao HTML -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🐾 Petshop</h1>
+    <!-- Este span exibirá o status da conexão com a API (ex: Online / Offline) -->
+    <span id="backend">carregando...</span>
+  </header>
+
+  <main>
+    <!-- Área para exibir alertas de sucesso ou erro ao usuário -->
+    <section class="largo">
+      <div id="mensagem"></div>
+    </section>
+
+    <!-- Seção de cadastro e listagem de Donos -->
+    <section>
+      <h2>Donos</h2>
+      <form id="form-dono">
+        <input id="dono-nome" placeholder="Nome" required>
+        <input id="dono-telefone" placeholder="Telefone">
+        <button type="submit">Cadastrar</button>
+      </form>
+      <ul id="lista-donos"></ul>
+    </section>
+
+    <!-- Seção de cadastro e listagem de Pets -->
+    <section>
+      <h2>Pets</h2>
+      <form id="form-pet">
+        <input id="pet-nome" placeholder="Nome" required>
+        <input id="pet-especie" placeholder="Espécie" required>
+        <!-- O select será preenchido dinamicamente pelo JavaScript com os donos cadastrados -->
+        <select id="pet-dono" required></select>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <ul id="lista-pets"></ul>
+    </section>
+
+    <!-- Painel visual para acompanhar as requisições HTTP (GET, POST, etc.) -->
+    <section class="largo">
+      <h2>Log das requisições HTTP</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <!-- Importa o arquivo JavaScript externo corretamente usando o atributo 'src' -->
+  <script src="script.js"></script>
+</body>
+</html>

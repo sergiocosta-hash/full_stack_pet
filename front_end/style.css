@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; margin: 0; background: #f4f5f7; color: #222; }
+  header { background: #2f4858; color: #fff; padding: 12px 20px; display: flex;
+           justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  header h1 { margin: 0; font-size: 1.3rem; }
+  #backend { font-size: .85rem; background: #ffffff22; padding: 4px 10px; border-radius: 12px; }
+  main { max-width: 1000px; margin: 20px auto; padding: 0 16px; display: grid; gap: 16px;
+         grid-template-columns: 1fr 1fr; }
+  section { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px #0001; }
+  section.largo { grid-column: 1 / -1; }
+  h2 { margin: 0 0 12px; font-size: 1.05rem; }
+  form { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  input, select, button { font: inherit; padding: 6px 8px; }
+  input, select { border: 1px solid #ccc; border-radius: 4px; flex: 1; min-width: 100px; }
+  button { border: 0; border-radius: 4px; background: #2f4858; color: #fff; cursor: pointer; }
+  button.sec { background: #e3e6ea; color: #222; }
+  button.perigo { background: #b3412f; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { display: flex; justify-content: space-between; align-items: center; gap: 8px;
+       padding: 8px 0; border-top: 1px solid #eee; }
+  li small { color: #666; display: block; }
+  .acoes { display: flex; gap: 4px; }
+  .vazio { color: #888; font-style: italic; }
+  #mensagem { min-height: 1.4em; margin-bottom: 8px; font-size: .9rem; }
+  #mensagem.erro { color: #b3412f; }
+  #log { font-family: ui-monospace, monospace; font-size: .8rem; max-height: 220px; overflow-y: auto; }
+  #log div { padding: 4px 0; border-top: 1px solid #eee; }
+  .ok { color: #1d7a46; } .falha { color: #b3412f; }
+  @media (max-width: 700px) { main { grid-template-columns: 1fr; } }
